@@ -1,3 +1,4 @@
+import 'package:fintech_project/view/Auth/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -58,7 +59,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                   SizedBox(height: screenHeight*0.08,),
                   GestureDetector(
                     onTap: (){
-                      // Get.to(()=>);
+                      Get.to(()=>LoginPage());
                     },
                     child: Container(
                       width: screenWidth*0.5,
