@@ -1,4 +1,10 @@
+import 'package:fintech_project/view/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../view/Analysis Page/analysis_page.dart';
+import '../../view/Transaction Page/transaction_page.dart';
+
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
@@ -14,22 +20,25 @@ class BottomNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildNavItem(Icons.home, ''),
-          _buildNavItem(Icons.search, ''),
-          _buildNavItem(Icons.swap_horiz, ''),
-          _buildNavItem(Icons.person, ''),
+          _buildNavItem(Icons.home, '', () => Get.offAll(()=>HomePage())),
+          _buildNavItem(Icons.analytics, '', () => Get.to(() => AnalysisPage())),
+          _buildNavItem(Icons.swap_horiz, '', () => Get.to(() =>  TransactionPage())),
+          _buildNavItem(Icons.person, '', () {}),
         ],
       ),
     );
   }
 
-  Widget _buildNavItem(IconData icon, String label) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(icon, color: const Color(0xFF0E3E3E)),
-        if (label.isNotEmpty) Text(label, style: const TextStyle(color: Color(0xFF0E3E3E))),
-      ],
+  Widget _buildNavItem(IconData icon, String label, VoidCallback onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, color: const Color(0xFF0E3E3E)),
+          if (label.isNotEmpty) Text(label, style: const TextStyle(color: Color(0xFF0E3E3E))),
+        ],
+      ),
     );
   }
 }
