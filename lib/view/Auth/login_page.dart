@@ -80,22 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 15),
                     _buildButton('Sign Up', color: Color(0xFFEAF6F1), textColor: Colors.black),
                     const SizedBox(height: 20),
-                    const Text.rich(
-                      TextSpan(
-                        text: 'Use ',
-                        children: [
-                          TextSpan(
-                            text: 'Fingerprint',
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          TextSpan(text: ' To Access'),
-                        ],
-                      ),
-                      style: TextStyle(fontFamily: 'Poppins'),
-                    ),
+
                     const SizedBox(height: 30),
                     const Text(
                       'or sign up with',

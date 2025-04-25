@@ -1,4 +1,7 @@
+import 'package:fintech_project/view/Auth/Security_Pin_Page.dart';
+import 'package:fintech_project/view/Auth/signup_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});
@@ -98,7 +101,9 @@ class ForgotPasswordPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(()=>SecurityPinPage());
+                        },
                         child: const Text(
                           'Next Step',
                           style: TextStyle(
@@ -121,7 +126,9 @@ class ForgotPasswordPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(()=>SignUpPage());
+                        },
                         child: const Text(
                           'Sign Up',
                           style: TextStyle(
@@ -143,31 +150,36 @@ class ForgotPasswordPage extends StatelessWidget {
                           radius: 20,
                           backgroundColor: Colors.white,
                           child: Icon(Icons.facebook, color: Colors.blue),
-                        ), // Replace with your asset
+                        ),
                         const SizedBox(width: 20),
                         CircleAvatar(
                           radius: 20,
                           backgroundColor: Colors.white,
                           child: Icon(Icons.g_mobiledata, color: Colors.blue),
-                        ),   // Replace with your asset
+                        ),
                       ],
                     ),
                     const SizedBox(height: 16),
-                    const Text.rich(
-                      TextSpan(
-                        text: "Don't have an account? ",
-                        children: [
-                          TextSpan(
-                            text: 'Sign Up',
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.w500,
+                     GestureDetector(
+                       onTap: (){
+                         Get.to(()=>SignUpPage());
+                       },
+                       child: Text.rich(
+                        TextSpan(
+                          text: "Don't have an account? ",
+                          children: [
+                            TextSpan(
+                              text: 'Sign Up',
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      style: TextStyle(fontFamily: 'Poppins'),
-                    ),
+                          ],
+                        ),
+                        style: TextStyle(fontFamily: 'Poppins'),
+                                           ),
+                     ),
                     const SizedBox(height: 30),
                   ],
                 ),
