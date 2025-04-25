@@ -1,3 +1,4 @@
+import 'package:fintech_project/view/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -32,7 +33,7 @@ class _PasswordChangedPageState extends State<PasswordChangedPage> with SingleTi
         //   context,
         //   MaterialPageRoute(builder: (context) => const HomePage()),
         // );
-        Get.back();
+        Get.offAll(()=>HomePage());
       }
     });
   }

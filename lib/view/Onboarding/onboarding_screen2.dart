@@ -59,7 +59,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
                   SizedBox(height: screenHeight*0.08,),
                   GestureDetector(
                     onTap: (){
-                      Get.to(()=>LoginPage());
+                      Get.offAll(()=>LoginPage());
                     },
                     child: Container(
                       width: screenWidth*0.5,

@@ -1,3 +1,4 @@
+import 'package:fintech_project/view/Notification%20Page/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controller/home_controller.dart';
@@ -42,7 +43,11 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Icon(Icons.notifications_none, color: Colors.white, size: 24),
+                GestureDetector(
+                  onTap: (){
+                    Get.to(()=>NotificationPage());
+                  },
+                    child: const Icon(Icons.notifications_none, color: Colors.white, size: 24)),
               ],
             ),
           ),

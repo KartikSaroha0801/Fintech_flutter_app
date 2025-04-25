@@ -2,6 +2,8 @@ import 'package:fintech_project/view/Auth/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../HomePage/home_page.dart';
+
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
@@ -191,7 +193,7 @@ class _SignUpPageState extends State<SignUpPage> {
           backgroundColor: color,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         ),
-        onPressed: () {},
+        onPressed: () => Get.offAll(HomePage()),
         child: Text(
           text,
           style: TextStyle(

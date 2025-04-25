@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/custom_widgets/bottom_nav_bar.dart';
-import '../../controller/transaction_controller.dart'; // Correct import
+import '../../controller/transaction_controller.dart';
+import '../Notification Page/notification_page.dart'; // Correct import
 
 class TransactionPage extends StatelessWidget {
   const TransactionPage({super.key});
@@ -33,7 +34,11 @@ class TransactionPage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const Icon(Icons.notifications_none, color: Colors.white, size: 24),
+                GestureDetector(
+                    onTap: (){
+                      Get.to(()=>NotificationPage());
+                    },
+                    child: const Icon(Icons.notifications_none, color: Colors.white, size: 24)),
               ],
             ),
           ),

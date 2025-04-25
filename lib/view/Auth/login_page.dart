@@ -220,9 +220,7 @@ class _LoginPageState extends State<LoginPage> {
           backgroundColor: color,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         ),
-        onPressed: () {
-          Get.to(()=>HomePage());
-        },
+        onPressed: () => Get.offAll(HomePage()),
         child: Text(
           text,
           style: TextStyle(

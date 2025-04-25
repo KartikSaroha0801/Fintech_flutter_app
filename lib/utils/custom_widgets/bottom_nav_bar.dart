@@ -1,3 +1,4 @@
+import 'package:fintech_project/view/FAQ%20Section/faq_page.dart';
 import 'package:fintech_project/view/HomePage/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,7 @@ class BottomNavBar extends StatelessWidget {
           _buildNavItem(Icons.home, '', () => Get.offAll(()=>HomePage())),
           _buildNavItem(Icons.analytics, '', () => Get.to(() => AnalysisPage())),
           _buildNavItem(Icons.swap_horiz, '', () => Get.to(() =>  TransactionPage())),
-          _buildNavItem(Icons.person, '', () {}),
+          _buildNavItem(Icons.live_help, '', () => Get.to(() =>  FAQPage())),
         ],
       ),
     );

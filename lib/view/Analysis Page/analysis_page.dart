@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controller/analysis_controller.dart';
 import '../../utils/custom_widgets/bottom_nav_bar.dart';
+import '../Notification Page/notification_page.dart';
 
 class AnalysisPage extends StatelessWidget {
   const AnalysisPage({super.key});
@@ -33,7 +34,11 @@ class AnalysisPage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const Icon(Icons.notifications_none, color: Colors.white, size: 24),
+                GestureDetector(
+                    onTap: (){
+                      Get.to(()=>NotificationPage());
+                    },
+                    child: const Icon(Icons.notifications_none, color: Colors.white, size: 24)),
               ],
             ),
           ),
