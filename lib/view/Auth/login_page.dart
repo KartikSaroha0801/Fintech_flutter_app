@@ -1,7 +1,10 @@
+import 'package:fintech_project/view/Auth/Password_Changed_Page.dart';
 import 'package:fintech_project/view/Auth/forgot_password_screen.dart';
 import 'package:fintech_project/view/Auth/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../HomePage/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -63,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     const SizedBox(height: 30),
-                    _buildButton('Log In', color: const Color(0xFF00D09E)),
+                    _buildLoginButton('Log In', color: const Color(0xFF00D09E)),
                     const SizedBox(height: 10),
                      GestureDetector(
                        onTap: (){
@@ -78,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                                            ),
                      ),
                     const SizedBox(height: 15),
-                    _buildButton('Sign Up', color: Color(0xFFEAF6F1), textColor: Colors.black),
+                    _buildSignUpButton('Sign Up', color: Color(0xFFEAF6F1), textColor: Colors.black),
                     const SizedBox(height: 20),
 
                     const SizedBox(height: 30),
@@ -183,7 +186,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildButton(String text, {Color color = Colors.white, Color textColor = Colors.black}) {
+  Widget _buildSignUpButton(String text, {Color color = Colors.white, Color textColor = Colors.black}) {
     return SizedBox(
       width: double.infinity,
       height: 50,
@@ -194,6 +197,31 @@ class _LoginPageState extends State<LoginPage> {
         ),
         onPressed: () {
           Get.to(()=>SignUpPage());
+        },
+        child: Text(
+          text,
+          style: TextStyle(
+            color: textColor,
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Poppins',
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLoginButton(String text, {Color color = Colors.white, Color textColor = Colors.black}) {
+    return SizedBox(
+      width: double.infinity,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        ),
+        onPressed: () {
+          Get.to(()=>HomePage());
         },
         child: Text(
           text,

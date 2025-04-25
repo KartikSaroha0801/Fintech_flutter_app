@@ -3,19 +3,6 @@ import 'dart:math' as math;
 
 import 'package:get/get.dart';
 
-// Placeholder HomePage class for navigation
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('Home Page'),
-      ),
-    );
-  }
-}
 
 class PasswordChangedPage extends StatefulWidget {
   const PasswordChangedPage({super.key});
